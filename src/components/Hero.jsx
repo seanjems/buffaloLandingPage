@@ -50,7 +50,6 @@ export default function Hero({ shopsRef, licenseRef, topRef }) {
           alignItems="center"
           justifyContent="start"
           gap="1rem"
-          mt="-5rem"
         >
           <Text fontSize="2rem" fontWeight="black" fontFamily="Rockwell Nova">
             OUR GAMES
