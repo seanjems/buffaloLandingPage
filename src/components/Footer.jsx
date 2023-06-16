@@ -10,7 +10,14 @@ import {
   useBreakpointValue,
   Flex,
 } from "@chakra-ui/react";
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaWhatsapp,
+  FaYoutube,
+} from "react-icons/fa";
 import { ReactNode } from "react";
 
 const Logo = (props) => {
@@ -100,14 +107,25 @@ export default function SmallWithLogoLeft() {
           >
             <FaTwitter />
           </SocialButton>
-          <SocialButton label={"YouTube"} href={"#"}>
-            <FaYoutube />
+          <SocialButton
+            label={"LinkedIn"}
+            href={
+              "https://www.linkedin.com/company/buffalo-slots/?viewAsMember=true"
+            }
+          >
+            <FaLinkedin />
           </SocialButton>
           <SocialButton
             label={"Facebook"}
             href={"https://www.facebook.com/profile.php?id=100092593178285"}
           >
             <FaFacebook />
+          </SocialButton>
+          <SocialButton
+            label={"WhatsApp"}
+            href={"https://chat.whatsapp.com/Hds3jW5zWLQ7m53izzw9Vo"}
+          >
+            <FaWhatsapp />
           </SocialButton>
         </Stack>
       </Container>
