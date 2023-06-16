@@ -8,6 +8,7 @@ import {
   Image,
   useBreakpointValue,
 } from "@chakra-ui/react";
+import Zoom from "react-medium-image-zoom";
 
 const Machines = () => {
   const PlayIcon = createIcon({
@@ -47,22 +48,26 @@ const Machines = () => {
         </Text> */}
       </Heading>
       <SimpleGrid columns={columns} spacing={4} position="relative">
-        <Image
-          alt={"Machine Image"}
-          fit={"contain"}
-          align={"center"}
-          width="fit-content"
-          height="20rem"
-          src="/images/slotmachines-3.png"
-        />
-        <Image
-          alt={"Machine Image"}
-          fit={"contain"}
-          align={"center"}
-          width="fit-content"
-          height="20rem"
-          src="/images/slotmachines-2.png"
-        />
+        <Zoom>
+          <Image
+            alt={"Machine Image"}
+            fit={"contain"}
+            align={"center"}
+            width="fit-content"
+            height="20rem"
+            src="/images/slotmachines-3.png"
+          />
+        </Zoom>
+        <Zoom>
+          <Image
+            alt={"Machine Image"}
+            fit={"contain"}
+            align={"center"}
+            width="fit-content"
+            height="20rem"
+            src="/images/slotmachines-2.png"
+          />
+        </Zoom>
       </SimpleGrid>
       <Text color={"gray.500"}>
         Buffalo Consultants Ltd is an importer of gaming machines from many

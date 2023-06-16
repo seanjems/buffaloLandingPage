@@ -10,7 +10,7 @@ import {
   useBreakpointValue,
   Flex,
 } from "@chakra-ui/react";
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { ReactNode } from "react";
 
 const Logo = (props) => {
@@ -29,7 +29,7 @@ const Logo = (props) => {
       href="https://buffaloslots.online"
     >
       <Image
-        src="/images/buffaloLogo.JPG"
+        src="/images/buffaloLogo.jpg"
         alt=""
         boxSize="100%"
         objectFit="contain"
@@ -92,14 +92,22 @@ export default function SmallWithLogoLeft() {
           <Text>All rights reserved</Text>
         </Flex>
         <Stack direction={"row"} spacing={6}>
-          <SocialButton label={"Twitter"} href={"#"}>
+          <SocialButton
+            label={"Twitter"}
+            href={
+              "https://twitter.com/SBufallo23820?t=6NaVEYk3c7V4cLUJZ4yRHg&s=08"
+            }
+          >
             <FaTwitter />
           </SocialButton>
           <SocialButton label={"YouTube"} href={"#"}>
             <FaYoutube />
           </SocialButton>
-          <SocialButton label={"Instagram"} href={"#"}>
-            <FaInstagram />
+          <SocialButton
+            label={"Facebook"}
+            href={"https://www.facebook.com/profile.php?id=100092593178285"}
+          >
+            <FaFacebook />
           </SocialButton>
         </Stack>
       </Container>

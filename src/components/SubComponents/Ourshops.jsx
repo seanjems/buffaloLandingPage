@@ -9,6 +9,7 @@ import {
   Image,
   Flex,
 } from "@chakra-ui/react";
+import Zoom from "react-medium-image-zoom";
 
 const Ourshops = ({ shopsRef }) => {
   const columns = useBreakpointValue({ base: 1, md: 2 });
@@ -44,58 +45,71 @@ const Ourshops = ({ shopsRef }) => {
         </Text> */}
       </Heading>
       <SimpleGrid columns={columns} spacing={4} position="relative">
-        <Image
-          alt={"Machine Image"}
-          fit={"cover"}
-          align={"center"}
-          width="100%"
-          rounded="5px"
-          src="/images/shop1.jpeg"
-        />
-        <Image
-          alt={"Machine Image"}
-          fit={"cover"}
-          align={"center"}
-          height="100%"
-          rounded="5px"
-          src="/images/shop2.jpeg"
-        />
+        <Zoom>
+          <Image
+            alt={"Machine Image"}
+            fit={"cover"}
+            align={"center"}
+            width="100%"
+            rounded="5px"
+            src="/images/shop1.jpeg"
+          />
+        </Zoom>
+        <Zoom>
+          <Image
+            alt={"Machine Image"}
+            fit={"cover"}
+            align={"center"}
+            height="100%"
+            rounded="5px"
+            src="/images/shop2.jpeg"
+          />
+        </Zoom>
       </SimpleGrid>
       <SimpleGrid columns={columns} spacing={4} position="relative">
-        <Image
-          alt={"Machine Image"}
-          fit={"cover"}
-          align={"center"}
-          width="100%"
-          rounded="5px"
-          src="/images/shop3.jpeg"
-        />
-        <Image
-          alt={"Machine Image"}
-          fit={"cover"}
-          align={"center"}
-          height="100%"
-          rounded="5px"
-          src="/images/shop6.jpeg"
-        />
+        <Zoom>
+          <Image
+            alt={"Machine Image"}
+            fit={"cover"}
+            align={"center"}
+            width="100%"
+            rounded="5px"
+            src="/images/shop3.jpeg"
+          />
+        </Zoom>
+        <Zoom>
+          <Image
+            alt={"Machine Image"}
+            fit={"cover"}
+            align={"center"}
+            height="100%"
+            rounded="5px"
+            src="/images/shop6.jpeg"
+          />
+        </Zoom>
       </SimpleGrid>
       <SimpleGrid columns={columns} spacing={4} position="relative">
-        <Image
-          alt={"Machine Image"}
-          fit={"cover"}
-          align={"center"}
-          width="100%"
-          rounded="5px"
-          src="/images/shop4.jpeg"
-        />
-        <Image
-          alt={"Machine Image"}
-          fit={"cover"}
-          align={"center"}
-          height="100%"
-          rounded="5px"
-          src="/images/shop5.jpeg"
-        />
+        <Zoom>
+          <Image
+            alt={"Machine Image"}
+            fit={"cover"}
+            align={"center"}
+            width="100%"
+            rounded="5px"
+            src="/images/shop4.jpeg"
+          />
+        </Zoom>
+
+        <Zoom>
+          <Image
+            alt={"Machine Image"}
+            fit={"cover"}
+            align={"center"}
+            height="100%"
+            rounded="5px"
+            src="/images/shop5.jpeg"
+          />
+        </Zoom>
       </SimpleGrid>
       <Box>
         <Text color={"gray.500"}>

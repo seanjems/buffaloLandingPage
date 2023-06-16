@@ -89,7 +89,7 @@ export default function Navbar({ shopsRef, licenseRef }) {
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
+        <MobileNav shopsRef={shopsRef} licenseRef={licenseRef} />
       </Collapse>
     </Box>
   );
@@ -114,6 +114,9 @@ const DesktopNav = ({ shopsRef, licenseRef }) => {
     }
     if (buttonaLabel.toLocaleLowerCase() === "license") {
       licenseRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (buttonaLabel === "ONLINE CASINO") {
+      window.open("http://buffalocasino.me", "_blank")?.focus();
     }
     if (buttonaLabel.toLocaleLowerCase() === "about us") {
       window.open("https://buffaloconsultants.com/", "_blank")?.focus();
@@ -212,7 +215,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
   );
 };
 
-const MobileNav = () => {
+const MobileNav = ({ shopsRef, licenseRef }) => {
   return (
     <Stack
       bg={useColorModeValue("white", "gray.800")}
@@ -220,15 +223,45 @@ const MobileNav = () => {
       display={{ md: "none" }}
     >
       {NAV_ITEMS.map((navItem) => (
-        <MobileNavItem key={navItem.label} {...navItem} />
+        <MobileNavItem
+          key={navItem.label}
+          {...navItem}
+          shopsRef={shopsRef}
+          licenseRef={licenseRef}
+        />
       ))}
     </Stack>
   );
 };
 
-const MobileNavItem = ({ label, children, href }) => {
+const MobileNavItem = ({ label, children, href, shopsRef, licenseRef }) => {
   const { isOpen, onToggle } = useDisclosure();
+  const handleScrollNav = (buttonaLabel) => {
+    console.log(
+      "🚀 ~ file: Navbar.jsx:102 ~ handleScrollNav ~ buttonaLabel:",
+      buttonaLabel
+    );
 
+    if (buttonaLabel.toLocaleLowerCase() === "shops") {
+      shopsRef.current.scrollIntoView({ behavior: "smooth" });
+      console.log(
+        "🚀 ~ file: Navbar.jsx:109 ~ handleScrollNav ~ shopsRef.current:",
+        shopsRef.current
+      );
+    }
+    if (buttonaLabel.toLocaleLowerCase() === "license") {
+      licenseRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (buttonaLabel === "ONLINE CASINO") {
+      window.open("http://buffalocasino.me", "_blank")?.focus();
+    }
+    if (buttonaLabel.toLocaleLowerCase() === "about us") {
+      window.open("https://buffaloconsultants.com/", "_blank")?.focus();
+    }
+    if (buttonaLabel === "E-PLAY AFRICA") {
+      window.open("https://e-playafrica.com/", "_blank")?.focus();
+    }
+  };
   return (
     <Stack spacing={4} onClick={children && onToggle}>
       <Flex
@@ -237,6 +270,7 @@ const MobileNavItem = ({ label, children, href }) => {
         href={href ?? "#"}
         justify={"space-between"}
         align={"center"}
+        onClick={() => handleScrollNav(label)}
         _hover={{
           textDecoration: "none",
         }}
@@ -297,18 +331,7 @@ const NAV_ITEMS = [
   //   },
   {
     label: "ONLINE CASINO",
-    // children: [
-    //   {
-    //     label: "Job Board",
-    //     subLabel: "Find your dream design job",
-    //     href: "#",
-    //   },
-    //   {
-    //     label: "Freelance Projects",
-    //     subLabel: "An exclusive list for contract work",
-    //     href: "#",
-    //   },
-    // ],
+    href: "#",
   },
   {
     label: "SHOPS",

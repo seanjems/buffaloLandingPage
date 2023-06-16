@@ -29,7 +29,7 @@ const HeaderSection = () => {
   return (
     <Box sx={boxStyle}>
       <Image
-        src="/images/headerImageCombined.jpeg"
+        src="/images/coverImage2.png"
         alt=""
         maxHeight="13rem"
         boxSize="100%"

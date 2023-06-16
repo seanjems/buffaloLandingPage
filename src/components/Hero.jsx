@@ -159,32 +159,32 @@ export const Blob = (props) => {
 export const GamesLinks = [
   {
     gameName: "MULTI VEGAS 81",
-    gameImage: "/images/multivegas81.webp",
+    gameImage: "/images/Multi-Vegas-81_thumbnail.webp",
     gameLink: "https://kajotgames.com/games/multi-vegas-81/",
   },
   {
     gameName: "SUPER JOKER 40",
-    gameImage: "/images/Super-Joker-40-main-photo.webp",
+    gameImage: "/images/Super-Joker-40_thumbnail.webp",
     gameLink: "https://kajotgames.com/games/super-joker-40/",
   },
   {
     gameName: "ALCHEMY SCATER",
-    gameImage: "/images/Alchemy-main-photo.webp",
+    gameImage: "/images/Alchemy_thumbnail.webp",
     gameLink: "https://kajotgames.com/games/alchemy/",
   },
   {
     gameName: "VIKINGS",
-    gameImage: "/images/Simply-The-Best-81-main-photo.webp",
+    gameImage: "/images/Vikings_thumbnail.webp",
     gameLink: "https://kajotgames.com/games/vikings/",
   },
   {
     gameName: "9 STARS",
-    gameImage: "/images/9-stars-main-photo.webp",
+    gameImage: "/images/9-Stars_thumbnail.webp",
     gameLink: "https://kajotgames.com/games/9-stars/",
   },
   {
     gameName: "JOKER 27",
-    gameImage: "/images/Joker-27-main-photo-mobile.webp",
+    gameImage: "/images/Joker-27_thumbnail.webp",
     gameLink: "https://kajotgames.com/games/joker-27/",
   },
   {
