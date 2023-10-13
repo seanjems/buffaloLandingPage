@@ -115,6 +115,9 @@ const DesktopNav = ({ shopsRef, licenseRef }) => {
     if (buttonaLabel.toLocaleLowerCase() === "license") {
       licenseRef.current.scrollIntoView({ behavior: "smooth" });
     }
+    if (buttonaLabel.toLocaleLowerCase() === "buffalo ug") {
+      window.open("https://buffalo.ug/", "_blank")?.focus();
+    }
     if (buttonaLabel === "ONLINE CASINO") {
       window.open("http://buffalocasino.me", "_blank")?.focus();
     }
@@ -258,6 +261,9 @@ const MobileNavItem = ({ label, children, href, shopsRef, licenseRef }) => {
     if (buttonaLabel.toLocaleLowerCase() === "about us") {
       window.open("https://buffaloconsultants.com/", "_blank")?.focus();
     }
+    if (buttonaLabel.toLocaleLowerCase() === "buffalo ug") {
+      window.open("https://buffalo.ug/", "_blank")?.focus();
+    }
     if (buttonaLabel === "E-PLAY AFRICA") {
       window.open("https://e-playafrica.com/", "_blank")?.focus();
     }
@@ -343,6 +349,10 @@ const NAV_ITEMS = [
   },
   {
     label: "E-PLAY AFRICA",
+    href: "#",
+  },
+  {
+    label: "BUFFALO UG",
     href: "#",
   },
   {

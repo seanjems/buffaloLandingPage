@@ -19,6 +19,7 @@ import Machines from "./SubComponents/Machines";
 import OurPolicy from "./SubComponents/OurPolicy";
 import Cooperation from "./SubComponents/Cooperation";
 import OurShops from "./SubComponents/Ourshops";
+import OurGames from "./SubComponents/OurGames";
 const PlayIcon = createIcon({
   displayName: "PlayIcon",
   viewBox: "0 0 58 58",
@@ -39,6 +40,7 @@ export default function Hero({ shopsRef, licenseRef, topRef }) {
       >
         <Flex flexDirection="column" justifyContent="start">
           <Machines />
+          <OurGames />
           <OurPolicy />
           <OurShops shopsRef={shopsRef} />
           <Cooperation licenseRef={licenseRef} />
