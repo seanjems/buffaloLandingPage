@@ -27,7 +27,7 @@ const OurGames = () => {
   useEffect(() => {
     const newImages = [];
     for (let i = 1; i <= 40; i++) {
-      const path = `http://localhost:3000/images/supergame/${i}.jpg`;
+      const path = `${process.env.REACT_APP_PUBLIC_URL}/images/supergame/${i}.jpg`;
 
       newImages.push({ src: path });
     }

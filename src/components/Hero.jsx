@@ -20,6 +20,8 @@ import OurPolicy from "./SubComponents/OurPolicy";
 import Cooperation from "./SubComponents/Cooperation";
 import OurShops from "./SubComponents/Ourshops";
 import OurGames from "./SubComponents/OurGames";
+import { useState } from "react";
+import { useEffect } from "react";
 const PlayIcon = createIcon({
   displayName: "PlayIcon",
   viewBox: "0 0 58 58",
@@ -28,7 +30,35 @@ const PlayIcon = createIcon({
 export default function Hero({ shopsRef, licenseRef, topRef }) {
   const columns = useBreakpointValue({ base: 1, md: 2 });
   const numberOfTiles = useBreakpointValue({ base: 1, md: 2 });
+  const [gameComponentOut, setGameComponentsOut] = useState([]);
   let gameCounter = 0;
+
+  useEffect(() => {
+    tileCreator();
+  }, []);
+
+  const tileCreator = () => {
+    const numberOfInstances = 54; // Number of instances you want to create
+
+    const gameComponents = [];
+
+    let x = 0;
+    for (let i = 0; i < numberOfInstances; i++) {
+      const gameLink = GamesLinks[x]; // Reuse links in order
+      gameComponents.push(
+        <GameComponent
+          key={i}
+          name={gameLink.gameName}
+          image={gameLink.gameImage}
+          link={gameLink.gameLink}
+        />
+      );
+      if (x == GamesLinks.length - 1) x = 0;
+      x++;
+    }
+    setGameComponentsOut(gameComponents);
+  };
+
   return (
     <Container maxW={"7xl"}>
       <Stack
@@ -68,21 +98,7 @@ export default function Hero({ shopsRef, licenseRef, topRef }) {
               color={useColorModeValue("red.50", "red.400")}
             />
 
-            {[...Array(numberOfTiles)].map((_, index) =>
-              GamesLinks.map((item, index) => {
-                gameCounter++;
-                return gameCounter < 37 ? (
-                  <GameComponent
-                    key={index}
-                    name={item.gameName}
-                    image={item.gameImage}
-                    link={item.gameLink}
-                  />
-                ) : (
-                  ""
-                );
-              })
-            )}
+            {gameComponentOut.map((item, index) => item)}
           </SimpleGrid>
         </Box>
       </Stack>
